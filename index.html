@@ -6,23 +6,20 @@
   <style>
     body {
       font-family: Tahoma, sans-serif;
-      background: #f4f6f9;
+      background: #ecf0f3;
       margin: 0;
-      padding: 0;
-      line-height: 1.7;
-      color: #222;
+      padding: 20px;
+      direction: rtl;
     }
-    .container {
-      display: flex;
+    .resume {
       max-width: 1100px;
       margin: auto;
+      display: flex;
       background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       border-radius: 12px;
       overflow: hidden;
-      margin-top: 30px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     }
-    /* ستون سمت راست */
     .sidebar {
       width: 30%;
       background: #2c3e50;
@@ -30,60 +27,76 @@
       padding: 30px 20px;
     }
     .sidebar h2 {
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid #3498db;
       padding-bottom: 6px;
-      margin-top: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       font-size: 18px;
+      color: #ecf0f1;
+    }
+    .sidebar h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #fff;
     }
     .sidebar p, .sidebar li {
       font-size: 14px;
+      margin: 6px 0;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li::before {
+      content: "• ";
+      color: #3498db;
     }
     .sidebar a {
-      color: #ecf0f1;
+      color: #1abc9c;
       text-decoration: none;
     }
     .sidebar a:hover {
       text-decoration: underline;
     }
-    /* ستون اصلی */
     .main {
       width: 70%;
       padding: 30px 40px;
     }
-    .main h1 {
-      margin-top: 0;
-      color: #2c3e50;
-    }
     .main h2 {
-      border-bottom: 2px solid #ddd;
+      border-bottom: 2px solid #3498db;
       padding-bottom: 5px;
       margin-top: 30px;
-      color: #34495e;
+      color: #2c3e50;
+    }
+    .main p, .main li {
+      font-size: 15px;
+      color: #333;
     }
     .main ul {
       margin: 5px 0 15px;
       padding-right: 20px;
     }
-    .main li {
-      margin-bottom: 6px;
-    }
     .job-title {
       font-weight: bold;
       color: #2980b9;
     }
+    .icon {
+      margin-left: 8px;
+      color: #3498db;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- ستون سمت راست -->
+  <div class="resume">
+    <!-- ستون کناری -->
     <div class="sidebar">
       <h1>امیر امیرحسینی</h1>
       <p><strong>توسعه‌دهنده پایتون</strong></p>
       <p>Backend, PyQt6</p>
+      <hr>
+      <h2>اطلاعات شخصی</h2>
       <p>📅 متولد: ۱۳۵۶/۹/۳</p>
-      <p>👨‍👩‍👦 وضعیت تأهل: متأهل</p>
-      <p>🎖 وضعیت سربازی: معافیت پزشکی</p>
+      <p>👨‍👩‍👦 متأهل</p>
+      <p>🎖 معافیت پزشکی</p>
 
       <h2>تماس</h2>
       <p>📧 <a href="mailto:a.amirhoseini@gmail.com">a.amirhoseini@gmail.com</a></p>
@@ -99,8 +112,7 @@
         <li>تعمیرات سخت‌افزار و نرم‌افزار</li>
       </ul>
 
-      <h2>زبان</h2>
-      <p>انگلیسی:</p>
+      <h2>زبان‌ها</h2>
       <ul>
         <li>خواندن: A2</li>
         <li>نوشتن: B1</li>
@@ -109,21 +121,19 @@
       </ul>
     </div>
 
-    <!-- ستون سمت چپ -->
+    <!-- بخش اصلی -->
     <div class="main">
-      <h1>رزومه</h1>
-
       <h2>خلاصه رزومه</h2>
       <p>
-        برنامه نویس پایتون با بیش از ۴ سال تجربه در توسعه نرم‌افزار و حل مسائل پیچیده. 
-        دارای مهارت‌های قوی در طراحی و پیاده‌سازی اپلیکیشن‌ها و تولید محتوای تحلیلی. 
-        آشنا به PyQt6 و پایگاه‌های داده مختلف. 
-        با روحیه تیمی و قابلیت کار تحت فشار، به دنبال چالش‌های جدید و راه‌حل‌های نوآورانه هستم.
+        برنامه‌نویس پایتون با بیش از ۴ سال تجربه در توسعه نرم‌افزار و حل مسائل پیچیده. 
+        دارای توانایی بالا در طراحی اپلیکیشن‌ها و تولید محتوای تحلیلی. 
+        آشنا به PyQt6 و پایگاه‌های داده متنوع. 
+        با روحیه تیمی و قابلیت کار تحت فشار، علاقه‌مند به چالش‌های جدید و ارائه راه‌حل‌های نوآورانه هستم.
       </p>
 
       <h2>سوابق تحصیلی</h2>
-      <p><strong>کارشناسی ارشد مدیریت (مدیریت آموزشی)</strong> – دانشگاه تهران (۱۳۸۰–۱۳۸۳) | معدل: ۱۷</p>
-      <p><strong>کارشناسی مدیریت آموزشی</strong> – دانشگاه تهران (۱۳۷۵–۱۳۷۹) | معدل: ۱۷.۵</p>
+      <p><span class="job-title">کارشناسی ارشد مدیریت (مدیریت آموزشی)</span> – دانشگاه تهران (۱۳۸۰–۱۳۸۳) | معدل: ۱۷</p>
+      <p><span class="job-title">کارشناسی مدیریت آموزشی</span> – دانشگاه تهران (۱۳۷۵–۱۳۷۹) | معدل: ۱۷.۵</p>
 
       <h2>سوابق شغلی</h2>
       <p class="job-title">کارشناس تولید محتوا – سازمان اوقاف و امور خیریه (۱۳۸۷–اکنون)</p>
@@ -137,11 +147,11 @@
       <h2>پروژه‌ها</h2>
       <ul>
         <li><strong>نرم‌افزار گوشکن</strong> – شرکت خصوصی (اسفند ۱۴۰۳)  
-          <a href="https://github.com/a-amirhoseini">github.com/a-amirhoseini</a></li>
+          <a href="https://github.com/a-amirhoseini">مشاهده در GitHub</a></li>
         <li><strong>مدیریت کتابخانه</strong> – سازمان اوقاف (تیر ۱۴۰۳)  
-          <a href="https://github.com/a-amirhoseini">github.com/a-amirhoseini</a></li>
+          <a href="https://github.com/a-amirhoseini">مشاهده در GitHub</a></li>
         <li><strong>استخراج داده از Clubhouse</strong> – شرکت TCI (تیر ۱۴۰۴)  
-          <a href="https://github.com/a-amirhoseini">github.com/a-amirhoseini</a></li>
+          <a href="https://github.com/a-amirhoseini">مشاهده در GitHub</a></li>
       </ul>
 
       <h2>دوره‌ها و گواهینامه‌ها</h2>
